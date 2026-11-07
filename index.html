@@ -169,15 +169,16 @@
         <div class="heroText">
           <p class="kicker">背语雁 · 高中文言文语境背诵</p>
           <h1>在真实文言例句里，<br><em>判断一字在此刻的意思。</em></h1>
-          <p>不做「看字猜义」的孤立默写。每一题都给出教材与真题原句、篇目出处与全句翻译，答案唯一绑定这一句。</p>
+          <p>不做「看字猜义」的孤立默写。覆盖高考 <b>120 个必考实词</b>与 <b>18 个必考虚词</b>，按词性分库，每题都给出教材与真题原句、篇目出处与全句翻译，答案唯一绑定这一句。</p>
           <div class="ctaRow">
             <a class="btn btnPrimary" href="./app/">在线使用</a>
             <a class="btn btnGhost" href="#download">下载 APK</a>
           </div>
           <div class="tags">
+            <span class="tag">实词 120 · 虚词 18</span>
+            <span class="tag">高考考点精讲</span>
             <span class="tag">离线使用</span>
             <span class="tag">无广告</span>
-            <span class="tag">数据可备份</span>
             <span class="tag">无需注册</span>
           </div>
         </div>
@@ -215,12 +216,12 @@
         <h2>离线、无广告、免注册，进度只存在你自己的手机里。</h2>
         <p class="lead">没有账号、没有埋点、没有统计 SDK。背词进度、错词本、设置与学习日志全部写在本机，可自行导出纯文本 JSON 备份。</p>
         <div class="grid grid3">
-          <div class="card"><h3>离线使用</h3><p>背诵、词库、错词本、句式、出处、听读、朗读与深浅色全部在本机完成，断网照常。</p></div>
+          <div class="card"><h3>离线使用</h3><p>背诵、实词库/虚词库、错词本、句式、出处与深浅色全部在本机完成，断网照常。</p></div>
           <div class="card"><h3>无广告 · 无需注册</h3><p>打开即背，没有开屏、没有弹窗、没有登录；也不申请任何与背诵无关的权限。</p></div>
           <div class="card"><h3>持续更新</h3><p>网页内容可静默热更新，原生能力随 APK 升级；检查更新失败会自动跳过，不打扰学习。</p></div>
           <div class="card"><h3>数据可备份</h3><p>「我的」页一键导出明文 JSON，换设备或重装后在同一页导入恢复。</p></div>
           <div class="card"><h3>原文可溯源</h3><p>每条例句都给出篇目、作者、朝代与全句翻译，一个字都不编。</p></div>
-          <div class="card"><h3>深浅色两态</h3><p>跟随系统偏好，也可手动切换；主题记忆同样只存本机。</p></div>
+          <div class="card"><h3>高考考点精讲</h3><p>每词标注句法成分、词性与「为什么是这个意思」，附高考资料与真题提示；无词类活用或古今异义就不占篇幅。</p></div>
         </div>
         <div class="tags">
           <span class="tag">离线使用</span><span class="tag">无广告</span>
@@ -252,7 +253,7 @@
             <p>再说出现代意思（4 选 1 或填空），等价判定按确定性规则，不做模糊匹配。</p>
           </div>
         </div>
-        <p class="lead" style="margin-top:18px">判定后立刻展开解析区：同义项全部例句、运用场景、词类活用、古今异义、关联特殊句式，并可一键收进错词本。</p>
+        <p class="lead" style="margin-top:18px">判定后立刻展开解析区：高考考点精讲（句法成分 · 词性 · 为何这样译）、同义项全部例句、运用场景与关联特殊句式；确有词类活用 / 古今异义才显示对应段落，没有就不占空间。</p>
       </div>
     </section>
 
@@ -275,8 +276,8 @@
           </article>
         </div>
         <div class="stats">
-          <span class="stat">16 词</span><span class="stat">40 义项</span>
-          <span class="stat">124 条例句</span><span class="stat">39 条来源</span><span class="stat">8 类句式</span>
+          <span class="stat">138 词（实词 120 · 虚词 18）</span><span class="stat">341 义项</span>
+          <span class="stat">431 条例句</span><span class="stat">107 个篇目</span><span class="stat">8 类句式</span>
         </div>
       </div>
     </section>
@@ -338,8 +339,8 @@
         <div style="margin-top:22px">
           <details open>
             <summary>网页热更新和 APK 更新有什么区别？</summary>
-            <p>通道 A 只静默替换网页 HTML（保留进度、不打断朗读）；通道 B 才涉及新安装包。
-              中文语音合成桥接、包名、权限这类原生能力只能随 APK 升级，网页热更新不会补上。</p>
+            <p>通道 A 只静默替换网页 HTML（保留进度、不打断当前作答）；通道 B 才涉及新安装包。
+              包名、权限、图标这类原生能力只能随 APK 升级，网页热更新不会补上。</p>
           </details>
           <details>
             <summary>换包名了，旧版背词进度怎么办？</summary>
@@ -349,11 +350,6 @@
           <details>
             <summary>安装时提示「未知来源 / 安装未知应用」？</summary>
             <p>APK 为自签名包，未走应用商店。请在系统「设置 → 安装未知应用」里允许用于安装的文件管理器或浏览器，然后重新点击安装包。应用内不做静默安装，也不申请安装权限。</p>
-          </details>
-          <details>
-            <summary>听读朗读没有声音？</summary>
-            <p>安卓版内置原生中文 TTS 桥接，但发音仍依赖手机已安装的中文语音引擎与语音数据。
-              请在「系统设置 → 语言与输入法 → 文字转语音（TTS）」确认中文可用；缺失时自动降级为可视文本逐段提示，不影响背诵。</p>
           </details>
           <details>
             <summary>断网还能背吗？检查更新会耗流量或上传数据吗？</summary>
