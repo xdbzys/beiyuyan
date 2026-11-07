@@ -1,12 +1,12 @@
 {
   "product": "背语雁",
   "packageName": "com.beiyuyan.wenyan",
-  "version": "1.10.0",
-  "versionCode": 110,
-  "apkVersion": "1.10.0",
-  "apkVersionCode": 110,
-  "webVersion": "1.10.0",
-  "webVersionCode": 110,
+  "version": "1.11.0",
+  "versionCode": 111,
+  "apkVersion": "1.11.0",
+  "apkVersionCode": 111,
+  "webVersion": "1.11.0",
+  "webVersionCode": 111,
   "minVersionCode": 100,
   "releaseDate": "2026-11-08",
   "minSdk": 21,
@@ -14,7 +14,7 @@
   "webGzUrl": "./app/index.html.gz",
   "apkUrl": "./背语雁.apk",
   "apkUrlCdn": "",
-  "apkSize": 373743,
-  "apkSha256": "9cbb4c1076a9766581dd04ecb7d0eded500113bd62039aeb7a00ca81534f342c",
-  "changelog": "v1.10.0 更新改为手动触发 · 每次更新后可查更新日志\n调整 · 检查更新只查询版本清单，不再自动替换页面；必须点「立即更新」才会执行\n调整 · 开屏提示只告知有新版本，不会自动更新；点「立即更新」才下载\n新增 · 「我的」新增更新日志，可查看每个版本的功能变更\n新增 · 更新完成后首次打开会提示已更新，并显示本次更新日志\n调整 · 更新日志只列功能变化，去掉与功能无关的内容"
+  "apkSize": 377839,
+  "apkSha256": "a6e9fa1830699f06d3fad29d689b907b4f9ef740306fd855d63af06b2d18675b",
+  "changelog": "v1.11.0 官网与网页版入口上线 · 打开更快\n新增 · 「我的」新增「打开官网」「打开网页版」入口，一键直达\n调整 · 官网版本信息与更新日志打开即显示，不用再等联网加载\n调整 · 网页版再次打开直接读本地缓存，并新增载入画面，不再白屏等待\n调整 · 官网页面图片全部换成软件图标，页面主色改为同款红色"
 }
