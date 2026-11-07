@@ -3,28 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#3b82f6">
+  <meta name="theme-color" content="#C62828">
   <title>背语雁 —— 在真实文言例句里判断义项</title>
   <meta name="description" content="背语雁：在真实文言文例句里判断义项、说出现代意思。离线、无广告、免注册，进度只存在你自己的设备里。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="背语雁 —— 在真实文言例句里判断义项">
+  <meta property="og:description" content="高考文言文 120 实词 / 18 虚词，离线、无广告、免注册。">
+  <meta property="og:image" content="https://xdbzys.github.io/beiyuyan/app/icon-512.png">
   <link rel="icon" href="./favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
-  <link rel="icon" type="image/svg+xml" href="./app/icon.svg?v=2">
+  <link rel="icon" type="image/svg+xml" href="./app/icon.svg?v=3">
   <link rel="apple-touch-icon" href="./icon-192.png">
   <link rel="manifest" href="./app/manifest.webmanifest">
+  <!-- 版本信息与累计更新日志内联在页面里，打开即显示，不必等两个联网请求。
+       内容由 scripts/gen-manifests.mjs 在每次生成清单时同步写入。 -->
+  <script id="siteInlineData" type="application/json">{"product":"背语雁","version":"1.11.0","versionCode":111,"releaseDate":"2026-11-08","minSdk":21,"packageName":"com.beiyuyan.wenyan","apkSize":377839,"apkSha256":"a6e9fa1830699f06d3fad29d689b907b4f9ef740306fd855d63af06b2d18675b","apkUrl":"./背语雁.apk","changelog":"v1.11.0 官网与网页版入口上线 · 打开更快\n新增 · 「我的」新增「打开官网」「打开网页版」入口，一键直达\n调整 · 官网版本信息与更新日志打开即显示，不用再等联网加载\n调整 · 网页版再次打开直接读本地缓存，并新增载入画面，不再白屏等待\n调整 · 官网页面图片全部换成软件图标，页面主色改为同款红色","releases":[{"version":"v1.11.0","items":["新增 · 「我的」新增「打开官网」「打开网页版」入口，一键直达","调整 · 官网版本信息与更新日志打开即显示，不用再等联网加载","调整 · 网页版再次打开直接读本地缓存，并新增载入画面，不再白屏等待","调整 · 官网页面图片全部换成软件图标，页面主色改为同款红色"]},{"version":"v1.10.0","items":["调整 · 检查更新只查询版本清单，不再自动替换页面；必须点「立即更新」才会执行","调整 · 开屏提示只告知有新版本，不会自动更新；点「立即更新」才下载","新增 · 「我的」新增更新日志，可查看每个版本的功能变更","新增 · 更新完成后首次打开会提示已更新，并显示本次更新日志","调整 · 更新日志只列功能变化，去掉与功能无关的内容"]},{"version":"v1.9.0","items":["新增 · 句式覆盖高考全部考点：9 类句式 44 条例句，另有 34 个固定结构速查","新增 · 打开软件发现新版本时开屏提示，可「以后再说」或「不再提示该版本」","新增 · 护眼模式，顶栏主题改为浅色 / 深色 / 护眼三档切换","调整 · 官网图标统一为红底「言」"]},{"version":"v1.8.0","items":["新增 · 艾宾浩斯记忆法开关，答对后间隔递增、答错 10 分钟后再来","调整 · 同一个意思的例句不再连着考，答过又没掌握的例句短时间内不重复","调整 · 删除本轮进度，改为所选词库掌握进度（实词 / 虚词）","新增 · 闪卡可切换「意思 + 例句 / 只显示例句」","调整 · 自动标记掌握移到背诵页，闪卡不再出现语境模式的设置","调整 · 关联词只显示词库已收录的字；温习入口移到「我的」前部"]},{"version":"v1.7.0","items":["调整 · 删除「义项」分类，只分实词 120 / 虚词 18 两大板块","新增 · 每个意思配多条例句，背诵时随机抽取，可切换「同义多句」","新增 · 手动标记掌握；某个意思的全部例句都答对才自动标记掌握","新增 · 每个词配易混 / 近义 / 反义关联词","修复 · 切换底部板块后背诵页不再重新抽题"]}]}</script>
   <script>(function(){try{var t=localStorage.getItem('beiyuyan_site_theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <style>
+    /* 主色与软件图标（红底黑「言」）保持一致 */
     :root{
-      --primary:#3b82f6; --primary-dark:#1d4ed8; --primary-deep:#1e3a8a;
-      --bg:#f0f7ff; --bg2:#ffffff; --card:#ffffff; --ink:#1e293b;
-      --muted:#64748b; --faint:#94a3b8; --rule:#dbeafe;
-      --slip:#fffaf0; --chip:#eff6ff; --soft:#f8fafc;
-      --shadow:0 8px 30px rgba(30,58,138,.09); --ok:#16a34a;
+      --primary:#C62828; --primary-dark:#A61B1B; --primary-deep:#7F1414;
+      --bg:#FFF6F5; --bg2:#ffffff; --card:#ffffff; --ink:#1e293b;
+      --muted:#64748b; --faint:#94a3b8; --rule:#F3D9D6;
+      --slip:#fffaf0; --chip:#FDECEA; --soft:#f8fafc;
+      --shadow:0 8px 30px rgba(127,20,20,.09); --ok:#16a34a;
     }
     html[data-theme="dark"]{
-      --primary:#60a5fa; --primary-dark:#93c5fd; --primary-deep:#bfdbfe;
-      --bg:#0f172a; --bg2:#1e293b; --card:#172033; --ink:#f1f5f9;
-      --muted:#94a3b8; --faint:#64748b; --rule:#334155;
-      --slip:#1e293b; --chip:#172554; --soft:#1e293b;
+      --primary:#E57373; --primary-dark:#EF9A9A; --primary-deep:#FFCDD2;
+      --bg:#171213; --bg2:#241a1a; --card:#201818; --ink:#f5efee;
+      --muted:#b9a5a3; --faint:#8a7472; --rule:#3d2a2a;
+      --slip:#2a2020; --chip:#331f1f; --soft:#201818;
       --shadow:0 8px 30px rgba(0,0,0,.35); --ok:#4ade80;
     }
     *{margin:0;padding:0;box-sizing:border-box}
@@ -47,7 +55,7 @@
     }
     .logo{display:flex;align-items:center;gap:9px;font-size:19px;font-weight:800;
       color:var(--primary-deep);letter-spacing:.5px}
-    .logo svg{width:30px;height:30px;flex:none}
+    .logo img{width:30px;height:30px;flex:none;border-radius:7px}
     .nav{display:flex;gap:16px;flex:1;flex-wrap:wrap;list-style:none}
     .nav a{color:var(--muted);font-size:14px;font-weight:600}
     .nav a:hover{color:var(--primary-dark)}
@@ -70,14 +78,19 @@
       color:var(--primary-deep)}
     .heroText h1 em{font-style:normal;color:var(--primary)}
     .heroText p{font-size:17px;color:var(--muted);max-width:560px;margin-bottom:26px}
-    .heroArt{width:270px;max-width:100%;flex:none;filter:drop-shadow(0 14px 26px rgba(30,58,138,.18))}
+    .heroArt{width:270px;max-width:100%;flex:none}
+    .heroIconCard{background:var(--card);border:1px solid var(--rule);border-radius:28px;
+      padding:26px 22px 18px;box-shadow:0 16px 34px rgba(127,20,20,.18);text-align:center}
+    .heroIconCard img{width:100%;max-width:216px;height:auto;display:block;margin:0 auto;
+      border-radius:22px}
+    .heroIconCap{margin-top:14px;font-size:13px;font-weight:700;color:var(--muted)}
     .ctaRow{display:flex;gap:12px;flex-wrap:wrap}
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
       padding:12px 24px;border-radius:12px;font-weight:700;font-size:15px;
       border:1px solid transparent;cursor:pointer;text-decoration:none}
     .btn:hover{text-decoration:none;transform:translateY(-1px)}
-    .btnPrimary{background:var(--primary);color:#fff;box-shadow:0 6px 18px rgba(59,130,246,.28)}
-    html[data-theme="dark"] .btnPrimary{color:#0f172a}
+    .btnPrimary{background:var(--primary);color:#fff;box-shadow:0 6px 18px rgba(198,40,40,.28)}
+    html[data-theme="dark"] .btnPrimary{color:#241a1a}
     .btnGhost{background:var(--bg2);color:var(--primary-deep);border-color:var(--rule)}
     .tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}
     .tag{display:inline-block;padding:6px 13px;border-radius:999px;background:var(--chip);
@@ -147,11 +160,7 @@
   <header>
     <div class="headerInner">
       <a class="logo" href="#top" aria-label="背语雁 回到顶部">
-        <svg viewBox="0 0 64 64" role="img" aria-label="背语雁 竹简与雁字">
-          <rect x="2" y="2" width="60" height="60" rx="14" style="fill:var(--primary)"/>
-          <rect x="19" y="10" width="26" height="44" rx="5" style="fill:var(--slip);stroke:var(--primary-deep);stroke-width:2"/>
-          <text x="32" y="43" text-anchor="middle" font-family="system-ui,'PingFang SC','Microsoft YaHei',sans-serif" font-size="26" font-weight="700" style="fill:var(--primary-deep)">雁</text>
-        </svg>
+        <img src="./app/icon.svg?v=3" width="30" height="30" alt="背语雁 软件图标：红底黑字「言」">
         背语雁
       </a>
       <ul class="nav">
@@ -189,28 +198,11 @@
           </div>
         </div>
         <div class="heroArt">
-          <svg viewBox="0 0 320 340" role="img" aria-label="背语雁 竹简与雁字">
-            <defs>
-              <linearGradient id="byyHeroBg" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#3b82f6"/>
-                <stop offset="1" stop-color="#1d4ed8"/>
-              </linearGradient>
-            </defs>
-            <rect x="8" y="8" width="304" height="324" rx="40" fill="url(#byyHeroBg)"/>
-            <rect x="105" y="38" width="110" height="264" rx="18"
-              style="fill:var(--slip);stroke:#1e3a8a;stroke-width:5"/>
-            <g stroke="#93c5fd" stroke-width="3" stroke-linecap="round">
-              <line x1="116" y1="52" x2="116" y2="288"/>
-              <line x1="204" y1="52" x2="204" y2="288"/>
-            </g>
-            <g stroke="#93c5fd" stroke-width="9" stroke-linecap="round">
-              <line x1="105" y1="76" x2="215" y2="76"/>
-              <line x1="105" y1="264" x2="215" y2="264"/>
-            </g>
-            <text x="160" y="215" text-anchor="middle"
-              font-family="system-ui,'PingFang SC','Microsoft YaHei',sans-serif"
-              font-size="122" font-weight="700" fill="#1e3a8a">雁</text>
-          </svg>
+          <div class="heroIconCard">
+            <img src="./app/icon.svg?v=3" width="216" height="216"
+                 alt="背语雁 软件图标：红底黑字「言」">
+            <p class="heroIconCap">红底黑「言」 · 软件同款图标</p>
+          </div>
         </div>
       </div>
     </section>
@@ -454,10 +446,22 @@
     }
     inheritSiteLinks();
 
+    /* 清单 URL 不再拼时间戳：站点自身有 10 分钟缓存，带 ?sharecode= 的
+       凭据由 resolveFrom 透传，去掉时间戳后二次打开可直接命中缓存。 */
     function manifestHref(name) {
-      var url = new URL(resolveFrom(name, PAGE));
-      url.searchParams.set('v', String(Date.now()));
-      return url.href;
+      return resolveFrom(name, PAGE);
+    }
+
+    /* 首屏数据已内联在页面里，解析完 HTML 就能渲染版本信息与更新日志，
+       不必等待两个清单请求返回；联网刷新放到页面空闲后后台进行。 */
+    function readInlineData() {
+      try {
+        var el = document.getElementById('siteInlineData');
+        if (!el) return null;
+        var data = JSON.parse(el.textContent || '{}');
+        if (!data || data.product !== '背语雁' || !data.version) return null;
+        return data;
+      } catch (e) { return null; }
     }
 
     function setText(id, text) {
@@ -496,6 +500,9 @@
       lines.forEach(function (line) { addLogLine(box, line, /^v/.test(line.trim())); });
     }
 
+    var inline = readInlineData();
+    var versionRendered = false;
+
     function render(data, manifestLink) {
       var version = 'v' + String(data.version || '');
       var size = Number(data.apkSize) || 0;
@@ -515,9 +522,12 @@
       if (btn) btn.href = resolveFrom(data.apkUrl || './背语雁.apk', manifestLink);
 
       renderSingleLog(data.changelog);
+      versionRendered = true;
     }
 
     function fallback() {
+      // 已经有内联数据或联网数据时，不用「暂不可用」覆盖掉它。
+      if (versionRendered) return;
       setText('versionLine', FALLBACK_LINE);
       setText('releaseLine', '发布日期暂不可用 · Android 5.0+');
       setText('shaLine', 'SHA-256 暂不可用');
@@ -529,34 +539,59 @@
       }
     }
 
-    // 累计更新日志（最新在前）；失败时由 version.json 的单版本日志兜底。
-    try {
-      fetch(manifestHref('changelog.json'), { cache: 'no-store' })
-        .then(function (resp) {
-          if (!resp.ok) throw new Error('HTTP ' + resp.status);
-          return resp.json();
-        })
-        .then(function (h) {
-          if (!h || !h.releases || !h.releases.length || h.product !== '背语雁') throw new Error('日志字段缺失');
-          renderHistory(h.releases);
-        })
-        .catch(function () { /* 由 renderSingleLog 兜底 */ });
-    } catch (e) { /* 忽略 */ }
+    /* 首屏：直接渲染内联数据，版本信息与累计日志打开即显示，0 次联网等待。 */
+    if (inline) {
+      if (inline.releases && inline.releases.length) renderHistory(inline.releases);
+      render(inline, PAGE);
+    }
 
-    try {
-      var link = manifestHref('version.json');
-      fetch(link, { cache: 'no-store' })
-        .then(function (resp) {
-          if (!resp.ok) throw new Error('HTTP ' + resp.status);
-          return resp.json();
-        })
-        .then(function (data) {
-          if (!data || !data.version || data.product !== '背语雁') throw new Error('清单字段缺失');
-          render(data, link);
-        })
-        .catch(fallback);
-    } catch (e) {
-      fallback();
+    /* 页面空闲后再联网核对最新版本，并顺带预取网页版；首屏不受影响。 */
+    function refreshInBackground() {
+      try {
+        fetch(manifestHref('changelog.json'))
+          .then(function (resp) {
+            if (!resp.ok) throw new Error('HTTP ' + resp.status);
+            return resp.json();
+          })
+          .then(function (h) {
+            if (!h || !h.releases || !h.releases.length || h.product !== '背语雁') return;
+            renderHistory(h.releases);
+          })
+          .catch(function () {});
+      } catch (e) { /* 忽略 */ }
+      try {
+        var link = manifestHref('version.json');
+        fetch(link)
+          .then(function (resp) {
+            if (!resp.ok) throw new Error('HTTP ' + resp.status);
+            return resp.json();
+          })
+          .then(function (data) {
+            if (!data || !data.version || data.product !== '背语雁') return;
+            render(data, link);
+          })
+          .catch(fallback);
+      } catch (e) { fallback(); }
+    }
+
+    function idleWork() {
+      refreshInBackground();
+      try {
+        var prefetch = document.createElement('link');
+        prefetch.rel = 'prefetch';
+        prefetch.setAttribute('as', 'document');
+        prefetch.href = resolveFrom('./app/', PAGE);
+        document.head.appendChild(prefetch);
+      } catch (e) { /* 预取失败不影响官网 */ }
+    }
+
+    if (inline && window.requestIdleCallback) {
+      window.requestIdleCallback(idleWork, { timeout: 2500 });
+    } else if (inline) {
+      setTimeout(idleWork, 600);
+    } else {
+      // 旧缓存页面没有内联数据：立即联网读取，失败走原有兜底。
+      idleWork();
     }
 
     /* 深浅色：系统偏好 + 本机记忆，切换不联网、不弹窗 */
@@ -569,7 +604,7 @@
         btn.setAttribute('aria-label', value === 'dark' ? '切换到浅色' : '切换到深色');
       }
       var meta = document.querySelector('meta[name="theme-color"]');
-      if (meta) meta.setAttribute('content', value === 'dark' ? '#0f172a' : '#3b82f6');
+      if (meta) meta.setAttribute('content', value === 'dark' ? '#171213' : '#C62828');
       try { localStorage.setItem(THEME_KEY, value); } catch (e) { /* 忽略 */ }
     }
     var saved = '';
