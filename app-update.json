@@ -15,7 +15,7 @@
   "apkUrl": "./背语雁.apk",
   "apkUrlCdn": "",
   "apkSize": 328687,
-  "apkSha256": "d92e9d34cab6e92d401cf6a4d215c680d96dcc67fbcc8fa09eb06a4d32683014",
+  "apkSha256": "94ebf5046e7f303be7e1a991d41a530ec2f6d6f162f9768708fbdd0788537374",
   "changelog": "v1.5.0 精简背词卡片 · 闪卡先总览后分述 · 底栏居中\n精简 · 背诵页删去本轮进度条与练习设置折叠条，只留例句、两步作答与解析\n词条 · 详情改为「全部义项 + 每义一句」；解析区只留释义、词性与句中成分\n闪卡 · 先列全部义项总览，再逐条给例句；去掉练义项、标记掌握等按钮\n修正 · 干扰项不再使用同字他义，同一个字不会在选项里出现两种现代意思\n修正 · 合并「走」的重复义项；「之」「也」的「不译」补足语法功能\n界面 · 底栏由 7 格改 6 格，六项均分居中；无古今异义、无活用的词不再显示空模块",
   "devNotes": "内部构建号 v1.5.0 / versionCode 105 / 迁移提示：包名由 com.gaokao.wenyan 变更为 com.beiyuyan.wenyan，无法覆盖安装且进度不自动继承 / 签名提示：后续所有背语雁版本必须复用 android/beiyuyan.keystore（alias beiyuyan） / 发布提示：清单由 scripts/gen-manifests.mjs 生成，禁止手工维护根清单与 /app/ 副本",
   "webHtmlUrl": "./app/index.html"
