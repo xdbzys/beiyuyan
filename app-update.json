@@ -1,0 +1,22 @@
+{
+  "product": "背语雁",
+  "packageName": "com.beiyuyan.wenyan",
+  "version": "1.0.0",
+  "versionCode": 100,
+  "apkVersion": "1.0.0",
+  "apkVersionCode": 100,
+  "webVersion": "1.0.0",
+  "webVersionCode": 100,
+  "minVersionCode": 100,
+  "releaseDate": "2026-11-07",
+  "minSdk": 21,
+  "webUrl": "./app/",
+  "webGzUrl": "./app/index.html.gz",
+  "apkUrl": "./背语雁.apk",
+  "apkUrlCdn": "",
+  "apkSize": 230383,
+  "apkSha256": "ff2a466614f23a9b1ffae583f318fd205842fad699b6f3e05b9df0207ae5cae1",
+  "changelog": "v1.0.0 首发：更名背语雁、官网上线、双通道更新\n新增 · 包名 com.beiyuyan.wenyan；换包名不迁移旧进度，如需保留请在旧版「我的」导出备份，安装本包后在同一页导入恢复\n新增 · 官网上线（10 栏目 + 独立隐私说明页），零外链、系统字体栈、深浅色两态\n新增 · 双通道更新：通道 A 网页内容热更新（版本闸门 + 保留进度 + 不打断朗读），通道 B APK 版本提示与前往下载\n权限 · 相对上一版「零权限」的唯一放宽是 android.permission.INTERNET，仅用于读取本站版本清单\n离线 · 背诵、词库、错词本、句式、出处、听读、朗读、深浅色与进度全部离线可用；检查更新失败静默跳过",
+  "devNotes": "内部构建号 v1.0.0 / versionCode 100 / 迁移提示：包名由 com.gaokao.wenyan 变更为 com.beiyuyan.wenyan，无法覆盖安装且进度不自动继承 / 签名提示：后续所有背语雁版本必须复用 android/beiyuyan.keystore（alias beiyuyan） / 发布提示：清单由 scripts/gen-manifests.mjs 生成，禁止手工维护根清单与 /app/ 副本",
+  "webHtmlUrl": "./app/index.html"
+}
