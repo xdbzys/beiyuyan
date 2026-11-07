@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 迁移跳转改由页尾内联脚本带 ?sharecode=... 凭据执行；meta refresh 无法读取运行时查询串，故移除。 -->
+  <title>背语雁 · 页面已迁移</title>
+  <meta name="description" content="背语雁官网已迁移到站点根路径，正在跳转。">
+  <style>
+    :root{--primary:#3b82f6;--primary-deep:#1e3a8a;--bg:#f0f7ff;--ink:#1e293b;--muted:#64748b}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+      background:var(--bg);color:var(--ink);
+      font-family:system-ui,"PingFang SC","Microsoft YaHei",sans-serif}
+    main{text-align:center;padding:32px}
+    h1{font-size:25px;margin:0 0 12px;color:var(--primary-deep)}
+    p{margin:8px 0;color:var(--muted);font-size:15px}
+    a{display:inline-block;margin-top:18px;padding:12px 24px;border-radius:12px;
+      background:var(--primary);color:#fff;text-decoration:none;font-weight:700}
+    a:hover{filter:brightness(.95)}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>背语雁</h1>
+    <p>官网已迁移到站点根路径，正在为你跳转……</p>
+    <p>兼容原项目 /site/ 书签；网页版 App 现在位于 /app/。</p>
+    <a href="../">返回背语雁官网</a>
+  </main>
+  <script>
+  (function () {
+    'use strict';
+    var PAGE = window.location.href;
+
+    /* 与官网首页及 App 内 src/update.js 完全相同的 resolveFrom 规则：
+       new URL(rel, base) 解析 + 继承当前页 / 基准 URL 查询串。 */
+    function resolveFrom(rel, baseHref) {
+      var base = new URL(baseHref || PAGE, PAGE);
+      var target = new URL(rel, base);
+      [PAGE, base.href].forEach(function (src) {
+        if (!src) return;
+        try {
+          new URL(src, PAGE).searchParams.forEach(function (value, key) {
+            if (!target.searchParams.has(key)) target.searchParams.append(key, value);
+          });
+        } catch (e) { /* 忽略不可解析来源 */ }
+      });
+      return target.href;
+    }
+
+    /* 凡是同源相对 URL 都要继承当前页 location.search；纯锚点 / 外链跳过。
+       先补链接凭据再跳转，JS 跳转被拦截时点击「返回背语雁官网」同样可达。 */
+    function inheritSiteLinks() {
+      var pageOrigin = new URL(PAGE).origin;
+      var nodes = document.querySelectorAll('a[href], link[href]');
+      Array.prototype.forEach.call(nodes, function (el) {
+        var raw = el.getAttribute('href');
+        if (!raw || raw.charAt(0) === '#') return;
+        var target = null;
+        try { target = new URL(raw, PAGE); } catch (e) { return; }
+        if (target.protocol !== 'http:' && target.protocol !== 'https:') return;
+        if (target.origin !== pageOrigin) return;
+        el.setAttribute('href', resolveFrom(raw, PAGE));
+      });
+    }
+    inheritSiteLinks();
+
+    var root = resolveFrom('../', PAGE);
+    try { window.location.replace(root); } catch (e) { window.location.href = root; }
+  })();
+  </script>
+</body>
+</html>
