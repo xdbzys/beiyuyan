@@ -1,10 +1,14 @@
-/* 《背语雁》Service Worker —— 同源缓存优先 + 网络兜底，保证离线可用。
+/* 《背语雁》Service Worker —— 同源缓存优先 + 后台更新，保证离线可用。
  * 只缓存同源 GET 资源；任何跨域请求一律直接放行，不拦截、不写入缓存。
  * install 预缓存 URL 会继承本 SW 注册 URL 的查询串凭据，避免无凭据 403。
- * 缓存名带 beiyuyan 版本号（1.0.0 与清单 version 同步）；activate 阶段
- * 清理同名前缀旧缓存，并一次性兼容清理更名前 wenyan-recite-pwa-* 旧缓存。
+ *
+ * 打开速度：页面导航采用 stale-while-revalidate —— 命中缓存立即出画面，
+ * 同时后台核对最新版写回缓存，下次打开即为新版本；静态资源仍是缓存优先。
+ * 缓存名带包名前缀与版本号（由 scripts/pwa.mjs 在构建时注入 package.json
+ * 的 version），发新版时缓存名变化，activate 清理旧缓存，避免永远读旧页面。
+ * activate 阶段同时一次性兼容清理更名前 wenyan-recite-pwa-* 旧缓存。
  */
-const CACHE_VERSION = '1.0.0';
+const CACHE_VERSION = '1.11.0';
 const CACHE_PREFIX = 'beiyuyan-pwa-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
 const LEGACY_CACHE_PREFIXES = ['wenyan-recite-pwa-'];
@@ -75,6 +79,19 @@ self.addEventListener('activate', function (event) {
   );
 });
 
+/** 联网取最新内容并在成功后写回缓存；异常响应不污染缓存。 */
+function refresh(request) {
+  return fetch(request).then(function (response) {
+    if (response && response.ok && response.type === 'basic') {
+      const copy = response.clone();
+      caches.open(CACHE_NAME)
+        .then(function (cache) { return cache.put(request, copy); })
+        .catch(function () {});
+    }
+    return response;
+  });
+}
+
 self.addEventListener('fetch', function (event) {
   const request = event.request;
   if (request.method !== 'GET') return;
@@ -89,27 +106,28 @@ self.addEventListener('fetch', function (event) {
   // 跨域资源不拦截、不缓存（本应用本身也不发起任何跨域请求）。
   if (url.origin !== self.location.origin) return;
 
-  event.respondWith(
-    caches.match(request)
-      .then(function (cached) {
-        if (cached) return cached;
-        return fetch(request).then(function (response) {
-          if (response && response.ok && response.type === 'basic') {
-            const copy = response.clone();
-            caches.open(CACHE_NAME)
-              .then(function (cache) { return cache.put(request, copy); })
-              .catch(function () {});
-          }
-          return response;
-        }).catch(function () {
-          // 离线且未命中缓存：导航请求回退到已预缓存的首页。
-          if (request.mode === 'navigate') {
-            return caches.match('./index.html').then(function (fallback) {
-              return fallback || caches.match('./');
-            });
-          }
-          return Response.error();
+  // 页面导航：缓存立即返回，后台静默更新；首次访问无缓存时直接走网络。
+  if (request.mode === 'navigate') {
+    event.respondWith(
+      caches.match(request).then(function (cached) {
+        const network = refresh(request).catch(function () {
+          if (cached) return cached;
+          // 离线且未命中缓存：回退到预缓存的首页。
+          return caches.match('./index.html').then(function (fallback) {
+            return fallback || caches.match('./');
+          });
         });
+        return cached || network;
       })
+    );
+    return;
+  }
+
+  // 图标 / manifest 等静态资源：缓存优先，未命中才联网并回填。
+  event.respondWith(
+    caches.match(request).then(function (cached) {
+      if (cached) return cached;
+      return refresh(request).catch(function () { return Response.error(); });
+    })
   );
 });
