@@ -1,12 +1,12 @@
 {
   "product": "背语雁",
   "packageName": "com.beiyuyan.wenyan",
-  "version": "1.11.0",
-  "versionCode": 111,
-  "apkVersion": "1.11.0",
-  "apkVersionCode": 111,
-  "webVersion": "1.11.0",
-  "webVersionCode": 111,
+  "version": "1.12.0",
+  "versionCode": 112,
+  "apkVersion": "1.12.0",
+  "apkVersionCode": 112,
+  "webVersion": "1.12.0",
+  "webVersionCode": 112,
   "minVersionCode": 100,
   "releaseDate": "2026-11-08",
   "minSdk": 21,
@@ -15,6 +15,6 @@
   "apkUrl": "./背语雁.apk",
   "apkUrlCdn": "",
   "apkSize": 377839,
-  "apkSha256": "a6e9fa1830699f06d3fad29d689b907b4f9ef740306fd855d63af06b2d18675b",
-  "changelog": "v1.11.0 官网与网页版入口上线 · 打开更快\n新增 · 「我的」新增「打开官网」「打开网页版」入口，一键直达\n调整 · 官网版本信息与更新日志打开即显示，不用再等联网加载\n调整 · 网页版再次打开直接读本地缓存，并新增载入画面，不再白屏等待\n调整 · 官网页面图片全部换成软件图标，页面主色改为同款红色"
+  "apkSha256": "604dfac8f3994cc4844331e60654527548b7b735ca5b2a88968e91f6eb93ca35",
+  "changelog": "v1.12.0 答题音效上线 · 间隔改滚轮\n新增 · 答题音效：每次作答即时反馈，答对与答错用两种不同音效\n新增 · 提供 5 套音效，可分别试听答对与答错，并可随时开关\n调整 · 「下一题间隔」改为左右滑动的滚轮选择\n新增 · 间隔时间增加到 10 档，补上「立即」和 0.5 秒、1.5 秒等档位\n修复 · 选「立即」后答完直接进下一题，不再强制等待 1 秒"
 }
