@@ -1,8 +1,15 @@
 {
   "product": "背语雁",
   "packageName": "com.beiyuyan.wenyan",
-  "latest": "v1.13.0",
+  "latest": "v1.13.1",
   "releases": [
+    {
+      "version": "v1.13.1",
+      "items": [
+        "调整 · 背诵页常用开关改为紧凑排布，题目和选项打开软件就能看到",
+        "调整 · 「答后展开词条全文」收进「更多设置」，常显区只留常用开关"
+      ]
+    },
     {
       "version": "v1.13.0",
       "items": [
