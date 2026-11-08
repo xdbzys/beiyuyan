@@ -8,7 +8,7 @@
  * 的 version），发新版时缓存名变化，activate 清理旧缓存，避免永远读旧页面。
  * activate 阶段同时一次性兼容清理更名前 wenyan-recite-pwa-* 旧缓存。
  */
-const CACHE_VERSION = '1.13.0';
+const CACHE_VERSION = '1.13.1';
 const CACHE_PREFIX = 'beiyuyan-pwa-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
 const LEGACY_CACHE_PREFIXES = ['wenyan-recite-pwa-'];
