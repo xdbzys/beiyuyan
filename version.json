@@ -1,12 +1,12 @@
 {
   "product": "背语雁",
   "packageName": "com.beiyuyan.wenyan",
-  "version": "1.13.1",
-  "versionCode": 114,
-  "apkVersion": "1.13.1",
-  "apkVersionCode": 114,
-  "webVersion": "1.13.1",
-  "webVersionCode": 114,
+  "version": "1.13.2",
+  "versionCode": 115,
+  "apkVersion": "1.13.2",
+  "apkVersionCode": 115,
+  "webVersion": "1.13.2",
+  "webVersionCode": 115,
   "minVersionCode": 100,
   "releaseDate": "2026-11-08",
   "minSdk": 21,
@@ -14,7 +14,7 @@
   "webGzUrl": "./app/index.html.gz",
   "apkUrl": "./背语雁.apk",
   "apkUrlCdn": "",
-  "apkSize": 381935,
-  "apkSha256": "7664321f3993bcb9864d0b8696a43f9b8e0091ce4b9e4b6fdd07ad0126a0d42d",
-  "changelog": "v1.13.1 常用开关紧凑排布 · 题目选项首屏可见 · 答后展开收进更多设置\n调整 · 背诵页常用开关改为紧凑排布，题目和选项打开软件就能看到\n调整 · 「答后展开词条全文」收进「更多设置」，常显区只留常用开关"
+  "apkSize": 386031,
+  "apkSha256": "a132647de1a17fabfab889a6ee6e4a0a4064c80ffb5e30ae1cd12335229250b6",
+  "changelog": "v1.13.2 常用开关改为彩色磁贴 · 三套主题可读 · 题目选项首屏可见\n调整 · 背诵页常用开关改为背群英同款彩色磁贴：2 列排布、带图标与当前状态，点整块即可切换\n调整 · 开关用颜色区分开与关，浅色 / 深色 / 护眼三套配色都清晰可读\n调整 · 收紧手机端留白，题目和四个选项打开软件依旧首屏可见"
 }
