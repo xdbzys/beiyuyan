@@ -1,4 +1,4 @@
-/* 《背语雁》Service Worker —— 页面导航网络优先 + 离线缓存兜底，保证打开即最新版。
+/* 《背文雁》Service Worker —— 页面导航网络优先 + 离线缓存兜底，保证打开即最新版。
  * 只缓存同源 GET 资源；任何跨域请求一律直接放行，不拦截、不写入缓存。
  * install 预缓存 URL 会继承本 SW 注册 URL 的查询串凭据，避免无凭据 403。
  *
@@ -14,7 +14,7 @@
  * 的 version），发新版时缓存名变化，activate 清理旧缓存，避免永远读旧页面。
  * activate 阶段同时一次性兼容清理更名前 wenyan-recite-pwa-* 旧缓存。
  */
-const CACHE_VERSION = '1.14.0';
+const CACHE_VERSION = '1.15.0';
 const CACHE_PREFIX = 'beiyuyan-pwa-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
 const LEGACY_CACHE_PREFIXES = ['wenyan-recite-pwa-'];
