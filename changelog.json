@@ -1,8 +1,15 @@
 {
   "product": "背语雁",
   "packageName": "com.beiyuyan.wenyan",
-  "latest": "v1.15.0",
+  "latest": "v1.16.0",
   "releases": [
+    {
+      "version": "v1.16.0",
+      "items": [
+        "优化 · 安卓版更新做到软件内完成：点「下载并更新」直接在软件里下载安装包，带进度条，下载完自动跳到安装界面，不用再开浏览器手动下载",
+        "优化 · 下载优先走 CDN 直链（清单 apkUrlCdn），没有则走官网直链，整体更快"
+      ]
+    },
     {
       "version": "v1.15.0",
       "items": [
